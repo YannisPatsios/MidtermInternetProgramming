@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro | Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="TaskMaster Pro Logo">
+                <h1>TaskMaster Pro</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tasks.html" class="active">Tasks</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="task-summary">
+            <h2>Task Summary</h2>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Tasks</h3>
+                    <p class="count">12</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Pending Tasks</h3>
+                    <p class="count">8</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Completed Tasks</h3>
+                    <p class="count">4</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-task">
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskName">Task Name:</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description:</label>
+                    <textarea id="taskDescription" name="taskDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority" required>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-filters">
+            <h2>Task List</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="statusFilter">Filter by Status:</label>
+                    <select id="statusFilter">
+                        <option value="all">All Tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priorityFilter">Filter by Priority:</label>
+                    <select id="priorityFilter">
+                        <option value="all">All Priorities</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="dueDate">Due Date</option>
+                        <option value="name">Task Name</option>
+                        <option value="priority">Priority</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="task-item" data-priority="high">
+                        <td>Project Proposal</td>
+                        <td>Complete the initial project proposal document</td>
+                        <td>2024-03-15</td>
+                        <td><span class="priority-badge high">High</span></td>
+                        <td><span class="status-badge pending">Pending</span></td>
+                        <td class="actions">
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="complete-btn"><i class="fas fa-check"></i></button>
+                        </td>
+                    </tr>
+                    <tr class="task-item" data-priority="medium">
+                        <td>Client Meeting</td>
+                        <td>Prepare presentation for client meeting</td>
+                        <td>2024-03-20</td>
+                        <td><span class="priority-badge medium">Medium</span></td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td class="actions">
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            <button class="complete-btn"><i class="fas fa-check"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TaskMaster Pro</h3>
+                <p>Making task management simple and efficient.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TaskMaster Pro. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
