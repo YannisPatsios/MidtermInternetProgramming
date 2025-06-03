@@ -4,140 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ioannis Patsios | Contact</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="sticky-header">
-        <nav>
-            <div class="logo">
-                <h1>Ioannis Patsios</h1>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <button id="darkModeToggle">
-                    <i class="fas fa-moon"></i>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ioannis Patsios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle ms-3">
+                        <button id="darkModeToggle" class="btn btn-outline-secondary">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="contact-intro">
-            <h2>Get in Touch</h2>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through any of the following channels.</p>
-        </section>
+        <section class="contact-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Get in Touch</h2>
+                <p class="text-center lead mb-5">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
 
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <address>
-                        <p>Kalivia Thorikou</p>
-                        <p>Greece</p>
-                    </address>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+306955898346">+30 69 5589 8346</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:yannispatsios@hotmail.com">yannispatsios@hotmail.com</a></p>
-                </div>
-                <div class="info-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank">Ioannis Patsios</a></p>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="contact-info">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-4">Contact Information</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4">
+                                            <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                                            <div>
+                                                <h4 class="h6 mb-1">Location</h4>
+                                                <p class="mb-0">Kalivia Thorikou, Greece</p>
+                                            </div>
+                                        </li>
+                                        <li class="mb-4">
+                                            <i class="fas fa-phone me-3 text-primary"></i>
+                                            <div>
+                                                <h4 class="h6 mb-1">Phone</h4>
+                                                <a href="tel:+306955898346" class="text-decoration-none">+30 69 5589 8346</a>
+                                            </div>
+                                        </li>
+                                        <li class="mb-4">
+                                            <i class="fas fa-envelope me-3 text-primary"></i>
+                                            <div>
+                                                <h4 class="h6 mb-1">Email</h4>
+                                                <a href="mailto:yannispatsios@hotmail.com" class="text-decoration-none">yannispatsios@hotmail.com</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <i class="fab fa-linkedin me-3 text-primary"></i>
+                                            <div>
+                                                <h4 class="h6 mb-1">LinkedIn</h4>
+                                                <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank" class="text-decoration-none">linkedin.com/in/ioannis-patsios</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="h4 mb-4">Send Me a Message</h3>
+                                <form>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                                <label for="name">Your Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                                <label for="email">Your Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <select class="form-select" id="subject">
+                                                    <option value="" selected disabled>Select a subject</option>
+                                                    <option value="job">Job Opportunity</option>
+                                                    <option value="project">Project Collaboration</option>
+                                                    <option value="internship">Internship</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                                <label for="subject">Subject</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating mb-3">
+                                                <textarea class="form-control" id="message" style="height: 150px" placeholder="Your Message"></textarea>
+                                                <label for="message">Your Message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-form-section">
-            <h2>Send Me a Message</h2>
-            <form id="contactForm" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section class="availability-section py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Current Availability</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                                <h3 class="h4">Cybersecurity Internships</h3>
+                                <p>Available for cybersecurity internship opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-flask fa-3x mb-3 text-primary"></i>
+                                <h3 class="h4">Research Collaborations</h3>
+                                <p>Open to research collaboration opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-network-wired fa-3x mb-3 text-primary"></i>
+                                <h3 class="h4">Network Security Projects</h3>
+                                <p>Interested in network security projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <i class="fas fa-broadcast-tower fa-3x mb-3 text-primary"></i>
+                                <h3 class="h4">Wireless Communications</h3>
+                                <p>Available for wireless communications research</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select a subject</option>
-                        <option value="job">Job Opportunity</option>
-                        <option value="project">Project Collaboration</option>
-                        <option value="internship">Internship</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
-
-        <section class="availability-section">
-            <h2>Availability</h2>
-            <div class="availability-content">
-                <p>I am currently available for:</p>
-                <ul>
-                    <li>Cybersecurity internships</li>
-                    <li>Research collaborations</li>
-                    <li>Network security projects</li>
-                    <li>Wireless communications research</li>
-                </ul>
-                <p>Feel free to reach out if you have any opportunities that align with my skills and interests.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Ioannis Patsios</h3>
-                <p>Cybersecurity & Networks Professional</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Me</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:yannispatsios@hotmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+306955898346"><i class="fas fa-phone"></i></a>
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3>Ioannis Patsios</h3>
+                    <p>Cybersecurity & Networks Professional</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                        <li><a href="projects.html" class="text-light">Projects</a></li>
+                        <li><a href="experience.html" class="text-light">Experience</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="mailto:yannispatsios@hotmail.com" class="text-light me-3"><i class="fas fa-envelope fa-lg"></i></a>
+                        <a href="tel:+306955898346" class="text-light"><i class="fas fa-phone fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ioannis Patsios. All rights reserved.</p>
+            <div class="text-center mt-5 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2024 Ioannis Patsios. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

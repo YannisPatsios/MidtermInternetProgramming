@@ -4,190 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ioannis Patsios | About</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="sticky-header">
-        <nav>
-            <div class="logo">
-                <h1>Ioannis Patsios</h1>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <button id="darkModeToggle">
-                    <i class="fas fa-moon"></i>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ioannis Patsios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle ms-3">
+                        <button id="darkModeToggle" class="btn btn-outline-secondary">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="about-section">
-            <div class="profile-header">
-                <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Ioannis Patsios">
-                </div>
-                <div class="profile-info">
-                    <h1>Ioannis Patsios</h1>
-                    <h2>Cybersecurity & Networks Professional</h2>
-                    <p class="location"><i class="fas fa-map-marker-alt"></i> Kalivia Thorikou, Greece</p>
-                    <div class="contact-info">
-                        <a href="tel:+306955898346"><i class="fas fa-phone"></i> +30 69 5589 8346</a>
-                        <a href="mailto:yannispatsios@hotmail.com"><i class="fas fa-envelope"></i> yannispatsios@hotmail.com</a>
-                        <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <section class="about-section py-5">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-4 text-center">
+                        <div class="profile-image mb-4">
+                            <img src="images/profile.jpg" alt="Ioannis Patsios" class="img-fluid rounded-circle">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="profile-info">
+                            <h1 class="display-4 mb-3">Ioannis Patsios</h1>
+                            <h2 class="h3 mb-3">Cybersecurity & Networks Professional</h2>
+                            <p class="location mb-3"><i class="fas fa-map-marker-alt me-2"></i> Kalivia Thorikou, Greece</p>
+                            <div class="contact-info">
+                                <a href="tel:+306955898346" class="btn btn-outline-primary me-2 mb-2"><i class="fas fa-phone me-2"></i>+30 69 5589 8346</a>
+                                <a href="mailto:yannispatsios@hotmail.com" class="btn btn-outline-primary me-2 mb-2"><i class="fas fa-envelope me-2"></i>yannispatsios@hotmail.com</a>
+                                <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank" class="btn btn-outline-primary mb-2"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="professional-summary">
-                <h2>Professional Summary</h2>
-                <p>Detail-oriented and motivated Cybersecurity & Networks student with a strong foundation in networking. Acquired knowledge in Distributed Systems, Edge Computing, Digital Forensics, Internet Programming, Network Administration, Secure Software Development, Ethical Hacking and Penetration Testing, Wireless Communications and SDR technology.</p>
-                <p>Passionate about emerging technologies in Cybersecurity and Wireless Communications. Experienced in research, problem-solving, and hands-on implementation of technical solutions.</p>
-                <p>Currently seeking an internship opportunity to apply my analytical and technical skills in a professional environment.</p>
-            </div>
-
-            <div class="skills-section">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3><i class="fas fa-network-wired"></i> Networking</h3>
-                        <ul>
-                            <li>TCP/IP</li>
-                            <li>VLANs</li>
-                            <li>DHCP</li>
-                            <li>DNS</li>
-                            <li>Network Security</li>
-                            <li>Cisco Networking (Routing & Switching)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
-                        <ul>
-                            <li>Ethical Hacking</li>
-                            <li>Penetration Testing</li>
-                            <li>Digital Forensics</li>
-                            <li>Secure Software Development</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-broadcast-tower"></i> Wireless Communication</h3>
-                        <ul>
-                            <li>SDR</li>
-                            <li>Signal Processing</li>
-                            <li>5G simulation</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Programming</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>Java</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Bash</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>Wireshark</li>
-                            <li>Cisco Packet Tracer</li>
-                            <li>Docker</li>
-                            <li>VirtualBox</li>
-                            <li>VMware</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
-                        <ul>
-                            <li>Linux (Ubuntu, Armbian, Kali)</li>
-                            <li>Windows</li>
-                            <li>macOS</li>
-                        </ul>
+                <div class="professional-summary mb-5">
+                    <h2 class="text-center mb-4">Professional Summary</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="lead">Detail-oriented and motivated Cybersecurity & Networks student with a strong foundation in networking. Acquired knowledge in Distributed Systems, Edge Computing, Digital Forensics, Internet Programming, Network Administration, Secure Software Development, Ethical Hacking and Penetration Testing, Wireless Communications and SDR technology.</p>
+                            <p>Passionate about emerging technologies in Cybersecurity and Wireless Communications. Experienced in research, problem-solving, and hands-on implementation of technical solutions.</p>
+                            <p>Currently seeking an internship opportunity to apply my analytical and technical skills in a professional environment.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="languages-section">
-                <h2>Languages</h2>
-                <div class="languages-grid">
-                    <div class="language">
-                        <h3>Greek</h3>
-                        <p>Native</p>
-                    </div>
-                    <div class="language">
-                        <h3>English</h3>
-                        <p>Fluent</p>
+                <div class="skills-section mb-5">
+                    <h2 class="text-center mb-4">Technical Skills</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-network-wired me-2"></i>Networking</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>TCP/IP</li>
+                                        <li><i class="fas fa-check me-2"></i>VLANs</li>
+                                        <li><i class="fas fa-check me-2"></i>DHCP</li>
+                                        <li><i class="fas fa-check me-2"></i>DNS</li>
+                                        <li><i class="fas fa-check me-2"></i>Network Security</li>
+                                        <li><i class="fas fa-check me-2"></i>Cisco Networking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-shield-alt me-2"></i>Cybersecurity</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>Ethical Hacking</li>
+                                        <li><i class="fas fa-check me-2"></i>Penetration Testing</li>
+                                        <li><i class="fas fa-check me-2"></i>Digital Forensics</li>
+                                        <li><i class="fas fa-check me-2"></i>Secure Software Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-broadcast-tower me-2"></i>Wireless Communication</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>SDR</li>
+                                        <li><i class="fas fa-check me-2"></i>Signal Processing</li>
+                                        <li><i class="fas fa-check me-2"></i>5G simulation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-code me-2"></i>Programming</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>Python</li>
+                                        <li><i class="fas fa-check me-2"></i>C</li>
+                                        <li><i class="fas fa-check me-2"></i>C++</li>
+                                        <li><i class="fas fa-check me-2"></i>Java</li>
+                                        <li><i class="fas fa-check me-2"></i>HTML/CSS/JavaScript</li>
+                                        <li><i class="fas fa-check me-2"></i>Bash</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-tools me-2"></i>Tools & Technologies</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>Git & GitHub</li>
+                                        <li><i class="fas fa-check me-2"></i>Wireshark</li>
+                                        <li><i class="fas fa-check me-2"></i>Cisco Packet Tracer</li>
+                                        <li><i class="fas fa-check me-2"></i>Docker</li>
+                                        <li><i class="fas fa-check me-2"></i>VirtualBox/VMware</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h4 mb-3"><i class="fas fa-desktop me-2"></i>Operating Systems</h3>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check me-2"></i>Linux (Ubuntu, Armbian, Kali)</li>
+                                        <li><i class="fas fa-check me-2"></i>Windows</li>
+                                        <li><i class="fas fa-check me-2"></i>macOS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="interests-section">
-                <h2>Interests & Activities</h2>
-                <div class="interests-grid">
-                    <div class="interest">
-                        <i class="fas fa-futbol"></i>
-                        <h3>Sports</h3>
-                        <p>12 years of competitive football in Greece and Israel</p>
+                <div class="languages-section mb-5">
+                    <h2 class="text-center mb-4">Languages</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h3 class="h4">Greek</h3>
+                                            <p class="text-muted">Native</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h3 class="h4">English</h3>
+                                            <p class="text-muted">Fluent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="interest">
-                        <i class="fas fa-music"></i>
-                        <h3>Music</h3>
-                        <p>Guitar, songwriting, and composition</p>
-                    </div>
-                    <div class="interest">
-                        <i class="fas fa-snowboarding"></i>
-                        <h3>Snowboarding</h3>
-                        <p>Occasional winter sports enthusiast</p>
-                    </div>
-                    <div class="interest">
-                        <i class="fas fa-fist-raised"></i>
-                        <h3>Kickboxing</h3>
-                        <p>Current practice</p>
+                </div>
+
+                <div class="interests-section">
+                    <h2 class="text-center mb-4">Interests & Activities</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-futbol fa-3x mb-3 text-primary"></i>
+                                    <h3 class="h4">Sports</h3>
+                                    <p>12 years of competitive football in Greece and Israel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-music fa-3x mb-3 text-primary"></i>
+                                    <h3 class="h4">Music</h3>
+                                    <p>Guitar, songwriting, and composition</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-snowboarding fa-3x mb-3 text-primary"></i>
+                                    <h3 class="h4">Snowboarding</h3>
+                                    <p>Occasional winter sports enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-fist-raised fa-3x mb-3 text-primary"></i>
+                                    <h3 class="h4">Kickboxing</h3>
+                                    <p>Current practice</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Ioannis Patsios</h3>
-                <p>Cybersecurity & Networks Professional</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Me</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:yannispatsios@hotmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+306955898346"><i class="fas fa-phone"></i></a>
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3>Ioannis Patsios</h3>
+                    <p>Cybersecurity & Networks Professional</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.html" class="text-light">About</a></li>
+                        <li><a href="projects.html" class="text-light">Projects</a></li>
+                        <li><a href="experience.html" class="text-light">Experience</a></li>
+                        <li><a href="contact.html" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ioannis-patsios" target="_blank" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="mailto:yannispatsios@hotmail.com" class="text-light me-3"><i class="fas fa-envelope fa-lg"></i></a>
+                        <a href="tel:+306955898346" class="text-light"><i class="fas fa-phone fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ioannis Patsios. All rights reserved.</p>
+            <div class="text-center mt-5 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2024 Ioannis Patsios. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 
