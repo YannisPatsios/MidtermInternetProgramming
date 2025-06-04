@@ -1,0 +1,83 @@
+/* styles.css - Custom styles for Task Manager App */
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #181a1b !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .navbar,
+body.dark-mode .navbar-light {
+  background-color: #23272b !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .navbar .nav-link,
+body.dark-mode .navbar .navbar-brand {
+  color: #f1f1f1 !important;
+}
+body.dark-mode .navbar .nav-link.active {
+  color: #ffc107 !important;
+}
+body.dark-mode .footer,
+body.dark-mode footer {
+  background-color: #23272b !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode .card,
+body.dark-mode .list-group-item {
+  background-color: #23272b !important;
+  color: #f1f1f1 !important;
+  border-color: #343a40 !important;
+}
+body.dark-mode .btn-primary {
+  background-color: #375a7f !important;
+  border-color: #375a7f !important;
+}
+body.dark-mode .btn-outline-secondary {
+  color: #f1f1f1 !important;
+  border-color: #f1f1f1 !important;
+}
+body.dark-mode a {
+  color: #80bdff;
+}
+body.dark-mode a:hover {
+  color: #ffc107;
+}
+body.dark-mode .text-muted.small {
+  color: #b0b8c1 !important;
+}
+
+/* Timeline styles for About page */
+.timeline {
+  position: relative;
+  margin-left: 1.5rem;
+}
+.timeline-line {
+  left: 0.5rem;
+  width: 4px;
+  background: #0d6efd;
+  z-index: 0;
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 0.5rem;
+  z-index: 1;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #0d6efd;
+}
+body.dark-mode .timeline-line {
+  background: #80bdff;
+}
+body.dark-mode .timeline-dot {
+  box-shadow: 0 0 0 2px #80bdff;
+  border-color: #23272b;
+}
+@media (max-width: 576px) {
+  .timeline {
+    margin-left: 0.75rem;
+  }
+  .timeline-dot, .timeline-line {
+    left: 0.25rem;
+  }
+} 

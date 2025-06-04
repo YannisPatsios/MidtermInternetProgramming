@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"> <!-- 1. Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 2. Responsive design -->
-    <meta name="description" content="Task Manager App - Manage your tasks efficiently."> <!-- 3. Page description for SEO -->
-    <meta name="keywords" content="task manager, productivity, to-do list, calendar, planner"> <!-- 4. SEO keywords -->
-    <meta name="author" content="Ioannis Patsios"> <!-- 5. Author of the website -->
-  
-    <title>Task Manager App | Home</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendar View - Task Manager App">
+  <title>Task Manager App | Calendar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="assets/img/logo.png" alt="App Logo" width="32" height="32" class="me-2">
         <span>Task Manager</span>
       </a>
@@ -27,11 +23,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="tasks.html">Tasks</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="calendar.html">Calendar</a></li>
         </ul>
         <button id="darkModeToggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle dark mode">
           <span class="bi bi-moon"></span>
@@ -42,21 +38,29 @@
 
   <!-- Main Content -->
   <main class="container my-5">
-    <!-- Welcome Section -->
-    <section class="text-center mb-5" aria-labelledby="welcome-title">
-      <h1 id="welcome-title" class="display-4">Welcome to Task Manager</h1>
-      <p class="lead">Efficiently manage your tasks and boost your productivity with our intuitive task management solution for modern teams.</p>
-      <a href="tasks.html" class="btn btn-primary btn-lg mt-3" role="button">Go to Tasks</a>
-    </section>
-
-    <!-- Latest Activity Section -->
-    <section id="latest-activity-section" aria-labelledby="activity-title">
-      <h2 id="activity-title" class="h4 mb-3">Latest Activity</h2>
-      <ul id="latest-activity" class="list-group">
-        <li class="list-group-item">No recent activity yet.</li> <!-- If there is no activity, this will be displayed -->
-      </ul>
-    </section>
+    <h1 class="mb-4 text-center">Calendar View</h1>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button id="prevMonth" class="btn btn-outline-primary"><i class="bi bi-chevron-left"></i></button>
+      <h2 id="calendarMonth" class="h5 mb-0"></h2>
+      <button id="nextMonth" class="btn btn-outline-primary"><i class="bi bi-chevron-right"></i></button>
+    </div>
+    <div id="calendarGrid" class="table-responsive"></div>
   </main>
+
+  <!-- Day Tasks Modal -->
+  <div class="modal fade" id="dayTasksModal" tabindex="-1" aria-labelledby="dayTasksModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dayTasksModalLabel">Tasks for <span id="modalDate"></span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="dayTasksList">
+          <!-- Tasks for the selected day will appear here -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-light text-center text-lg-start mt-auto py-3" aria-label="Footer">
